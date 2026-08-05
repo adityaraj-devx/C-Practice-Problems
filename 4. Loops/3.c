@@ -1,0 +1,34 @@
+// 3. Even Numbers
+
+// Print all even numbers from 1 to 100.
+
+#include <stdio.h>
+
+int main(){
+    for ( int i = 2; i <= 100; i+=2)
+    {
+        printf("%d ", i);
+    }
+    printf("\n");
+    printf("\n");
+    
+    int j = 2;
+    while (j <= 100)
+    {
+        printf("%d ", j);
+        j+=2;
+    }
+    printf("\n");
+    printf("\n");
+
+    int i = 2;
+    do
+    {
+        printf("%d ", i);
+        i+=2;
+    } while (i <= 100);
+    
+    
+    
+    return 0;
+}
