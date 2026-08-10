@@ -1,32 +1,37 @@
-// 14. Print Prime Numbers
+//  14 — Count Frequency of a Digit
 
-// Take N.
+// Take two integers from the user:
 
-// Print every prime number from
+// A number
+// A digit to search for
 
-// 2 → N
+// Then count how many times that digit appears in the number.
 
 // Example
-
-// Input: 20
+// Enter a number: 1223242
+// Enter a digit: 2
 
 // Output:
-// 2 3 5 7 11 13 17 19
+// 2 appears 4 times
 
 #include <stdio.h>
 
 int main(){
-    int n;
+    int number, digit, count = 0;;
     printf("Enter a number: ");
-    scanf("%d", &n);
+    scanf("%d", &number);
+    printf("Enter a digit: ");
+    scanf("%d", &digit);
 
-    if (n <= 1) {
-        printf("Not Prime");
-        return 0;
+    while (number != 0)
+    {
+        int check = number % 10;
+        if (check==digit)
+        {
+            count++;
+        }
+        number/=10; 
     }
-    for (int i = 2; i <= n; i++) {
-        
-    }
-
+    printf("count = %d", count);
     return 0;
 }
